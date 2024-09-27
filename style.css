@@ -1,0 +1,116 @@
+/* Common Styling for all pages */
+
+/* Apply box-sizing globally */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+}
+
+/* Navigation Bar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #ff3366; /* Romantic pink */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.navbar img {
+    width: 50px;
+    height: auto;
+}
+
+.nav-links {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    transition: background 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #ff99b5; /* Lighter pink on hover */
+    border-radius: 4px;
+}
+
+.container {
+    padding: 100px 20px;
+    margin-top: 80px;
+    text-align: center;
+}
+
+/* Blind Dating Form Styling */
+.form-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h2 {
+    color: #ff3366;
+}
+
+input[type="text"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #ff3366;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-top: 15px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #ff6699; /* Lighter shade on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar img {
+        width: 40px;
+    }
+
+    .nav-links a {
+        font-size: 16px;
+    }
+}

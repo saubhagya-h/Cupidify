@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blind Dating</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <img src="logo.png" alt="Logo"> <!-- Replace with your logo -->
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blind-dating.html">Blind Dating</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Blind Dating Section -->
+    <div class="container">
+        <h2>Blind Dating Service</h2>
+        <p>Fill out your preferences, choose a date, and get ready for an exciting blind date!</p>
+
+        <div class="form-container">
+            <form id="blind-dating-form">
+                <label for="age">Preferred Age Range:</label>
+                <select id="age" name="age">
+                    <option value="13-14">13-14</option>
+                    <option value="15-16">15-16</option>
+                    <option value="17-18">17-18</option>
+                </select>
+
+                <label for="location">Preferred Location:</label>
+                <input type="text" id="location" name="location" placeholder="Enter city or region">
+
+                <label for="date">Select Date for Blind Date:</label>
+                <input type="date" id="date" name="date">
+
+                <label for="email">Email Address (For Notifications):</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email">
+
+                <button type="submit">Submit Preferences & Confirm Date</button>
+            </form>
+            
+            <!-- Message that appears after submission -->
+            <p id="confirmation-message" style="display:none; color: green; font-weight: bold;">
+                Your request is submitted, you will be notified when someone accepts your request.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to handle form submission
+        document.getElementById("blind-dating-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const age = document.getElementById("age").value;
+            const location = document.getElementById("location").value;
+            const date = document.getElementById("date").value;
+            const email = document.getElementById("email").value;
+
+            if (age && location && date && email) {
+                // Display confirmation message
+                document.getElementById("confirmation-message").style.display = "block";
+                setTimeout(window.location.href="index.html", 20000);
+            } else {
+                alert("Please fill out all fields before submitting.");
+            }
+        });
+    </script>
+
+</body>
+</html>
